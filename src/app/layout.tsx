@@ -1,7 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import {
+  arrayRegular,
+  arrayWide,
+  arraySemibold,
+  arraySemiboldWide,
+  arrayBold,
+  arrayBoldWide,
+  authorExtralight,
+  authorLight,
+  authorRegular,
+  authorMedium,
+  authorSemibold,
+  authorBold,
+  authorVariable,
+} from "../fonts/fonts";
 import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${arrayRegular.variable} ${arrayWide.variable} ${arraySemibold.variable} ${arraySemiboldWide.variable} ${arrayBold.variable} ${arrayBoldWide.variable} ${authorExtralight.variable} ${authorLight.variable} ${authorRegular.variable} ${authorMedium.variable} ${authorSemibold.variable} ${authorBold.variable} ${authorVariable.variable} antialiased`}
       >
         {children}
       </body>
